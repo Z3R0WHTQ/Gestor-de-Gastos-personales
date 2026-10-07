@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de movimientos</title>
+    <link rel="stylesheet" href="style-lmov.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Ingresar Movimiento</a></li>
+                <li><a href="./Lmov.html">Historial de movimientos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor-movimientos">
+    <h3>Historial de Movimientos</h3>
+
+    <table class="tabla-movimientos">
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Tipo</th>
+                <th>Cantidad</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="lista-movimientos">
+            
+            <!-- Mensaje si aún no hay registros almacenados -->
+            <tr id="mensaje-vacio">
+                <td colspan="4" class="sin-datos">No hay movimientos registrados.</td>
+            </tr>
+
+        </tbody>
+        <!-- PIE DE TABLA PARA EL BALANCE TOTAL -->
+        <tfoot>
+            <tr>
+                <td colspan="2"><strong>Balance Total:</strong></td>
+                <td colspan="2"><strong id="balance">$ 0.00</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</div>
+    <footer>
+        &copy; 2026
+    </footer>
+    <script src="script2.js"></script>
+</body>
+</html>

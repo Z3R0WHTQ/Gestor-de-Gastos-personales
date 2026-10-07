@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Gastos</title>
+</head>
+<body>
+    <header>
+        <li><a href="./index.html">Ingresar Movimiento</a></li>
+        <li><a href="./Lmov.html">Historial de movimientos</a></li>
+    </header>
+    <div class="form-container">
+        <h2>Registrar Monto</h2>
+        
+        <form action="#" method="POST">
+            <!-- Descripción-->
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <input 
+                    type="text" 
+                    id="descripcion" 
+                    name="descripcion" 
+                    placeholder="Ej. Pago de arriendo, Salario, etc." 
+                    required
+                >
+            </div>
+
+            <!-- Cantidad / Valor del Monto -->
+            <div class="form-group">
+                <label for="cantidad">Cantidad ($):</label>
+                <input 
+                    type="number" 
+                    id="cantidad" 
+                    name="cantidad" 
+                    step="100" 
+                    min="50" 
+                    placeholder="0" 
+                    required
+                >
+            </div>
+
+            <!-- Tipo de Monto -->
+            <div class="form-group">
+                <label for="tipo">Tipo:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="" disabled selected>Selecciona un tipo</option>
+                    <option value="ingreso">Ingreso</option>
+                    <option value="gasto">Gasto</option>
+                </select>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="btn-submit">Guardar Registros</button>
+        </form>
+    </div>
+    <footer>
+        &copy; 2026
+    </footer>
+</body>
+</html>

@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Variables & Tema Dark Fintech - Historial de Movimientos
+   ========================================================================== */
+:root {
+  --bg-main: #0F172A;
+  --card-bg: #1E293B;
+  --card-border: #334155;
+  --accent-green: #22C55E;
+  --accent-red: #EF4444;
+  --text-primary: #E2E8F0;
+  --text-secondary: #94A3B8;
+  --shadow-soft: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Navegación */
+header {
+  width: 100%;
+  max-width: 520px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 8px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 8px;
+}
+
+header li {
+  flex: 1;
+}
+
+header a {
+  display: block;
+  text-align: center;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+header a:hover {
+  color: var(--text-primary);
+}
+
+/* Contenedor del Historial */
+.contenedor-movimientos {
+  width: 100%;
+  max-width: 520px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--card-border);
+}
+
+.contenedor-movimientos h3 {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos de la Tabla */
+.tabla-movimientos {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tabla-movimientos th {
+  background-color: var(--bg-main);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.tabla-movimientos td {
+  padding: 12px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.tabla-movimientos tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.sin-datos {
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+  padding: 20px !important;
+}
+
+/* Pie de Tabla (Balance Total) */
+.tabla-movimientos tfoot {
+  background-color: var(--bg-main);
+  font-weight: 600;
+}
+
+.tabla-movimientos tfoot td {
+  border-top: 2px solid var(--card-border);
+  border-bottom: none;
+  padding: 14px 12px;
+}
+
+#balance {
+  color: var(--accent-green);
+  font-size: 1.05rem;
+}
+
+/* Clases útiles para JavaScript */
+.ingreso {
+  color: var(--accent-green) !important;
+  font-weight: 600;
+}
+
+.gasto {
+  color: var(--accent-red) !important;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  margin-top: 24px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  text-align: center;
+}
